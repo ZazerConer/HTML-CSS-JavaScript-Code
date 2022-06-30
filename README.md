@@ -34,6 +34,8 @@ _Create your own HTML code for the website or whatever you want to use._
 
 [Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/Responsive_Video_Popup)
 
+<hr>
+
 ## Get User Location
 
 [Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ZazerConer/HTML-CSS-JavaScript-Code/main/get-user-location/index.html)
