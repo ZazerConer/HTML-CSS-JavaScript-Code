@@ -36,6 +36,6 @@ _Create your own HTML code for the website or whatever you want to use._
 
 ## Get User Location
 
-[Demo](https://raw.githubusercontent.com/ZazerConer/HTML-CSS-JavaScript-Code/main/get-user-location/index.html)
+[Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ZazerConer/HTML-CSS-JavaScript-Code/main/get-user-location/index.html)
 
 [Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/get-user-location)
