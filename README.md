@@ -41,3 +41,27 @@ _Create your own HTML code for the website or whatever you want to use._
 [Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ZazerConer/HTML-CSS-JavaScript-Code/main/get-user-location/index.html)
 
 [Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/get-user-location)
+
+## Admin Login (php)
+
+[Demo](http://mygitsite.42web.io/demo/login-system/admin_page.php)
+
+[Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/Admin_Login_php)
+
+<hr>
+
+## Dark Mode Switch
+
+[Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ZazerConer/HTML-CSS-JavaScript-Code/main/Dark-Mode-Switch/index.html)
+
+[Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/Dark-Mode-Switch)
+
+<hr>
+
+## Cylindrical Digital Clock Inverted
+
+[Demo](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ZazerConer/HTML-CSS-JavaScript-Code/main/Cylindrical-Digital-Clock-Inverted/index.html)
+
+[Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/Cylindrical-Digital-Clock-Inverted)
+
+
