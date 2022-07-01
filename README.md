@@ -42,6 +42,8 @@ _Create your own HTML code for the website or whatever you want to use._
 
 [Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/get-user-location)
 
+<hr>
+
 ## Admin Login (php)
 
 [Demo](http://mygitsite.42web.io/demo/login-system/admin_page.php)
