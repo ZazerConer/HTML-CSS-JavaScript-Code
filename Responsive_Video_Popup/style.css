@@ -68,21 +68,3 @@ font-size: 1em;
 color: #fff;
 letter-spacing: 2px;
 text-transform: uppercase;}
-
-video {width: 100%;}
-@media (max-width: 1020px) 
-{
-.clip video {min-width: 70%;}
-}
-@media (max-width: 720px) 
-{
-.clip video {min-width: 80%;}
-}
-@media (max-width: 480px) 
-{
-.clip video {min-width: 90%;}
-}
-@media (max-width: 360px) 
-{
-.clip video {min-width: 100%;}
-}
