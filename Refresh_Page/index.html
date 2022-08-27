@@ -1,0 +1,400 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Refresh-Page</title>
+
+<style>
+* {margin: 0;
+padding: 5px;
+box-sizing: border-box;}
+body {background: #eee;
+width: 100%;
+height: 100vh;
+font-family: Tahoma,Arial,sans-serif;
+text-align: center;
+font-size: 100%;}
+h2 {color: #1976D2;
+font-weight: 600;
+text-shadow: 0 1px 1px #fff;}
+#popup {display: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-image: linear-gradient(#FF7043,#FF5722,#F4511E,#E64A19);
+padding: 1rem;
+width: 24rem;
+border: 3px solid #afafaf;
+border-radius: 15px;
+z-index: 200;
+transition: 3s;
+opacity: 1}
+#popupclose {float: right;
+padding: 1.6px 10px;
+cursor: pointer;
+font-size: 28px;
+display: block;
+background: transparent;
+color: #D84315;
+background: #eee;
+box-shadow: 1px 1px 1px #575757;
+border-radius: 50px;
+border: none;
+text-shadow:1px 1px 1px #fff;
+outline: none}
+#popupcontent {padding: 10px;
+font-size: 15px;}
+#button {color: #fff;
+outline: none;
+font-size: 20px;
+padding: 3px 15px;
+border-radius: 5px;
+text-shadow:1px 1px 1px #323232;
+background-image: linear-gradient(#FF7043,#FF5722,#F4511E,#E64A19,#D84315);}
+#restart-btn {padding: 5px 10px;
+border-radius: 8px;
+margin-top: 35px;
+font-size: 16px;
+font-weight: 500;
+outline: none;
+background: #eee;}
+#page {color: #D84315;
+text-decoration: none;
+outline: none;
+text-shadow:1px 1px 1px #fff;
+-webkit-tap-highlight-color: transparent;
+-moz-tap-highlight-color: transparent;}
+#buttons {color: #fff;
+outline: none;
+font-size: 20px;
+padding: 5px 17px;
+border-radius: 5px;
+text-shadow:1px 1px 1px #323232;
+background-image: linear-gradient(#FF7043,#FF5722,#F4511E,#E64A19,#D84315);}
+details > summary {margin: auto;
+color: #fff;
+outline: none;
+padding: 5px;
+width: 150px;
+background-color: #1e88e5;
+border: none;
+box-shadow: 2px 2px 3px #2b2b2b;
+cursor: auto;}
+{transition: linear 0.3s;}
+details > p {background-color: transparent;
+padding: 6px;
+box-shadow: 2px 2px 3px #2b2b2b rgb(0.0.0.27) -2px -2px -3px #2b2b2b rgb(0.0.0.0.12);}
+.frame {max-width: 550px;
+height: 320px;
+margin: auto;
+font-family: monospace;
+font-weight: 700;
+color: #fff;
+text-align: left;
+padding: 25px;
+line-height: normal;
+overflow: scroll;
+border-radius: 10px;
+background: #1976D2;
+box-shadow: 0 3px 6px #575757;}
+.frame2 {max-width: 550px;
+height: 50px;
+margin: auto;
+font-family: monospace;
+font-weight: 700;
+color: #fff;
+text-align: center;
+padding: 20px 0;
+line-height: normal;
+overflow: scroll;
+border-radius: 6px;
+background: #1976D2;
+box-shadow: 0 3px 6px #575757;}
+.frame3 {max-width: 550px;
+height: 185px;
+margin: auto;
+font-family: monospace;
+font-weight: 700;
+color: #fff;
+text-align: left;
+padding: 20px;
+line-height: normal;
+overflow: scroll;
+border-radius: 8px;
+background: #1976D2;
+box-shadow: 0 3px 6px #575757;}
+</style>
+
+</head>
+<body>
+
+<br>
+<h2>Make a refresh button with a popup box.</h2>
+<br><br>
+<h3 style="color:#323232">DEMO</h3>
+<button id="button">Refresh &#10227;</button>
+<div id="overlay"></div>
+<div id="popup">
+<div id="popupcontrols"><span id="popupclose">&times;</span></div>
+<div id="popupcontent">
+<h2 style="margin-top:50px;color:#fff;text-shadow:1px 1px 1px #323232;">Do you want to refresh this page?</h2>
+<form>
+<button id="restart-btn">
+<a id="page" type="button" onClick="history.go(0)">YES</a>
+</button>
+</form>
+</div>
+</div>
+
+<br><br><br>
+
+<details>
+<summary><strong>Show Code</strong></summary>
+<br><br>
+
+<b>HTML</b>
+<div class="frame">
+&lt;!DOCTYPE html&gt;
+<br>
+&lt;html&gt;
+<br>
+&lt;head&gt;
+<br>
+&lt;title>Refresh Page&lt;/title&gt;
+<br><br>
+&lt;link rel="stylesheet" href="style.css"&gt;
+<br><br>
+&lt;/head&gt;
+<br>
+&lt;body&gt;
+<br><br>
+&lt;button id="button"&gt;Refresh &#10227;&lt;/button&gt;
+<br><br>
+&lt;div id="overlay"&gt;&lt;/div&gt;
+<br>
+&lt;div id="popup"&gt;
+<br>
+&lt;div id="popupcontrols"&gt;
+<br><br>
+&lt;span id="popupclose">&times;&lt;/span>&lt;/div&gt;
+<br><br>
+&lt;div id="popupcontent"&gt;
+<br>
+&lt;h2 style="margin-top:50px">Do you want to refresh this page?&lt;/h2&gt;
+<br><br>
+&lt;form&gt;
+<br>
+&lt;button id="restart-btn"&gt;
+<br>
+&lt;a id="page" onClick="history.go(0)"&gt;YES&lt;/a&gt;
+<br>
+&lt;/button&gt;
+<br>
+&lt;/form&gt;
+<br><br>
+&lt;/div&gt;
+<br>
+&lt;/div&gt;
+<br><br>
+&lt;script src="script.js"&gt;
+<br><br>
+&lt;body&gt;
+<br>
+&lt;html&gt;
+</div>
+
+<br><br>
+
+<b>CSS</b>
+<div class="frame">
+#popup {display: none;
+<br>
+position: fixed;
+<br>
+top: 50%;
+<br>
+left: 50%;
+<br>
+transform: translate(-50%, -50%);
+<br>
+background: #ccc;
+<br>
+padding: 1rem;
+<br>
+width: 24rem;
+<br>
+border-radius: 0.5rem;
+<br>
+z-index: 200;
+<br>
+transition: 3s;
+<br>
+opacity: 1;}
+<br><br>
+#popupclose {float: right;
+<br>
+padding: 1px 10px;
+<br>
+cursor: pointer;
+<br>
+font-size: 28px;
+<br>
+display: block;
+<br>
+background-color: transparent;
+<br>
+color: #fff;
+<br>
+background: #212121;
+<br>
+border-radius: 50px;
+<br>
+border: none;
+<br>
+outline: none;}
+<br><br>
+#popupcontent {padding: 10px;
+<br>
+font-size: 15px;}
+<br><br>
+#button {outline: none;
+<br>
+font-size: 20px;
+<br>
+padding: 3px 10px;
+<br>
+border-radius: 5px;}
+<br><br>
+#restart-btn {padding: 5px 10px;
+<br>
+border-radius: 5px;
+<br>
+margin-top: 35px;
+<br>
+font-size: 16px;
+<br>
+font-weight: 500;
+<br>
+outline: none;}
+<br><br>
+#page {color: #000;
+<br>
+text-decoration: none;
+<br>
+outline: none;
+<br>
+-webkit-tap-highlight-color: transparent;
+<br>
+-moz-tap-highlight-color: transparent;}
+</div>
+
+<br><br>
+
+<b>JS</b>
+<div class="frame">
+// Initialize Variables
+<br>
+var closePopup = document.getElementById("popupclose");
+<br>
+var overlay = document.getElementById("overlay");
+<br>
+var popup = document.getElementById("popup");
+<br>
+var button = document.getElementById("button");
+<br><br>
+// Close Popup Event
+<br>
+closePopup.onclick = function() {
+<br>
+overlay.style.display = 'none';
+<br>
+popup.style.display = 'none';
+<br>
+};
+<br><br>
+// Show Overlay and Popup
+<br>
+button.onclick = function() {
+<br>
+overlay.style.display = 'block';
+<br>
+popup.style.display = 'block';
+<br>
+};
+</div>
+</details>
+
+<br><br><br>
+<div style="width:100%;border:1px solid #1976D2"></div> 
+<br><br>
+
+<h2>Make the page refresh automatically.</h2>
+<br><br>
+<h3 style="color:#323232">DEMO</h3>
+<a type="button" onClick="location.href='auto-refresh.html'">
+<button id="buttons">Click here</button>
+</a>
+<br><br><br>
+<h3 style="color:#1976D2;text-shadow:0 1px #fff;">Use it like this :</h3>
+<div class="frame2">
+&lt;meta http-equiv="refresh" content="10;URL"&gt;
+</div>
+<br>
+<b style="color:#454545">Place it before &lt;/head&gt;</b>
+<br><br><br>
+<h3 style="color:#1976D2;text-shadow:0 1px #fff;">Example :</h3>
+<div class="frame3">
+&lt;!DOCTYPE html&gt;
+<br>
+&lt;html&gt;
+<br>
+&lt;head&gt;
+<br><br>
+&lt;meta http-equiv="refresh" content="10;URL"&gt;
+<br><br>
+&lt;/head&gt;
+<br>
+&lt;body&gt;
+<br><br>
+&lt;/body&gt;
+<br>
+&lt;/html&gt;
+</div>
+<br>
+<b style="color:#454545">Change "10" seconds to however long you want.</b>
+<br>
+<b style="color:#454545">Put the same URL page that you want to refresh automatically.</b>
+
+<br><br><br><br><br>
+
+<a style="color:dodgerblue;font-weight:600;text-decoration:none;cursor:pointer;float:right;" href="https://github.com/ZazerConer/HTML-CSS-JavaScript-Code">
+<svg class="github" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+</svg></a>
+
+<br><br>
+
+<script>
+// Initialize Variables
+var closePopup = document.getElementById("popupclose");
+var overlay = document.getElementById("overlay");
+var popup = document.getElementById("popup");
+var button = document.getElementById("button");
+// Close Popup Event
+closePopup.onclick = function() {
+overlay.style.display = 'none';
+popup.style.display = 'none';
+};
+// Show Overlay and Popup
+button.onclick = function() {
+overlay.style.display = 'block';
+popup.style.display = 'block';
+};
+{
+}
+</script>
+
+</body>
+</html>
