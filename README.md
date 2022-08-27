@@ -66,4 +66,10 @@ _Create your own HTML code for the website or whatever you want to use._
 
 [Source Code](https://github.com/ZazerConer/HTML-CSS-JavaScript-Code/tree/main/Cylindrical-Digital-Clock-Inverted)
 
+<hr>
 
+## Refresh Page (Button & Auto refresh)
+
+[Demo & Source Code](https://htmlpreview.github.io/?https://raw.githubusercontent.com/ZazerConer/HTML-CSS-JavaScript-Code/main/Refresh_Page/index.html)
+
+<br>
